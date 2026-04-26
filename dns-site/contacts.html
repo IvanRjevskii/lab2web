@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DNS - Контакты</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>🛒 DNS</h1>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Главная</a></li>
+                    <li><a href="catalog.html">Каталог</a></li>
+                    <li><a href="contacts.html">Контакты</a></li>
+                    <li><a href="guestbook.html">Гостевая книга</a></li>
+                    <li><a href="auth.html">Вход/Регистрация</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <h2>Напишите нам</h2>
+        <form class="contact-form" method="post" action="php/contact.php">
+            <label>
+                Имя:
+                <input type="text" name="name" required>
+            </label>
+            <label>
+                Email:
+                <input type="email" name="email" required>
+            </label>
+            <label>
+                Тема:
+                <input type="text" name="subject" required>
+            </label>
+            <label>
+                Сообщение:
+                <textarea name="message" rows="5" required></textarea>
+            </label>
+            <button type="submit">Отправить</button>
+        </form>
+
+        <div class="contact-info">
+            <p>📞 +7 (800) 77-07-900</p>
+            <p>📍 г. Москва, ул. Примерная, д. 10</p>
+            <p>✉️ <a href="mailto:info@dns.ru">info@dns.ru</a></p>
+        </div>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>© 2024 DNS. Все права защищены.</p>
+        </div>
+    </footer>
+</body>
+</html>

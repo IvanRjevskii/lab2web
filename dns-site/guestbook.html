@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DNS - Гостевая книга</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>🛒 DNS</h1>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Главная</a></li>
+                    <li><a href="catalog.html">Каталог</a></li>
+                    <li><a href="contacts.html">Контакты</a></li>
+                    <li><a href="guestbook.html">Гостевая книга</a></li>
+                    <li><a href="auth.html">Вход/Регистрация</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <h2>Оставьте ваш отзыв</h2>
+        <form class="guestbook-form" method="post" action="php/guestbook.php">
+            <fieldset>
+                <legend>Личная информация</legend>
+                <label>
+                    Ваше имя:
+                    <input type="text" name="name" required>
+                </label>
+                <label>
+                    Email:
+                    <input type="email" name="email" required>
+                </label>
+            </fieldset>
+
+            <fieldset>
+                <legend>Ваш отзыв</legend>
+                <label>
+                    Тема отзыва:
+                    <input type="text" name="subject" required>
+                </label>
+                <label>
+                    Ваш отзыв:
+                    <textarea name="message" rows="5" required></textarea>
+                </label>
+            </fieldset>
+
+            <fieldset>
+                <legend>Оценка товара</legend>
+                <div class="radio-group">
+                    <label><input type="radio" name="rating" value="5" checked> Отлично (5)</label>
+                    <label><input type="radio" name="rating" value="4"> Хорошо (4)</label>
+                    <label><input type="radio" name="rating" value="3"> Нормально (3)</label>
+                    <label><input type="radio" name="rating" value="2"> Плохо (2)</label>
+                    <label><input type="radio" name="rating" value="1"> Ужасно (1)</label>
+                </div>
+            </fieldset>
+
+            <fieldset>
+                <legend>Рекомендуете ли вы нас?</legend>
+                <div class="radio-group">
+                    <label><input type="radio" name="recommend" value="yes"> Да</label>
+                    <label><input type="radio" name="recommend" value="no"> Нет</label>
+                    <label><input type="radio" name="recommend" value="maybe" checked> Затрудняюсь ответить</label>
+                </div>
+            </fieldset>
+
+            <fieldset>
+                <legend>Интересующие категории</legend>
+                <div class="checkbox-group">
+                    <label><input type="checkbox" name="categories[]" value="smartphones"> Смартфоны</label>
+                    <label><input type="checkbox" name="categories[]" value="laptops"> Ноутбуки</label>
+                    <label><input type="checkbox" name="categories[]" value="audio"> Аудиотехника</label>
+                    <label><input type="checkbox" name="categories[]" value="tv"> Телевизоры</label>
+                    <label><input type="checkbox" name="categories[]" value="appliances"> Бытовая техника</label>
+                </div>
+            </fieldset>
+
+            <fieldset>
+                <legend>Дополнительно</legend>
+                <label>
+                    Город:
+                    <select name="city">
+                        <option value="">Выберите город</option>
+                        <option value="moscow">Москва</option>
+                        <option value="spb">Санкт-Петербург</option>
+                        <option value="ekb">Екатеринбург</option>
+                        <option value="novosibirsk">Новосибирск</option>
+                        <option value="other">Другой</option>
+                    </select>
+                </label>
+                <label>
+                    Как вы о нас узнали?
+                    <select name="source">
+                        <option value="">Выберите вариант</option>
+                        <option value="search">Поисковые системы</option>
+                        <option value="social">Социальные сети</option>
+                        <option value="friends">От друзей</option>
+                        <option value="advertising">Реклама</option>
+                    </select>
+                </label>
+                <label>
+                    Пожелания:
+                    <textarea name="wishes" rows="3" placeholder="Ваши пожелания по улучшению..."></textarea>
+                </label>
+            </fieldset>
+
+            <input type="submit" value="Отправить отзыв">
+        </form>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>© 2024 DNS. Все права защищены.</p>
+        </div>
+    </footer>
+</body>
+</html>
