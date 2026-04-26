@@ -1,0 +1,551 @@
+/* Базовые настройки */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f8f8f8;
+    color: #333;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Шапка */
+header {
+    background-color: #ff6600;
+    color: white;
+    padding: 20px;
+    text-align: center;
+    border-bottom: 3px solid #333;
+}
+
+header h1 {
+    margin: 0;
+}
+
+/* Меню навигации - стили для ссылок */
+nav {
+    background-color: #333;
+    padding: 15px;
+    text-align: center;
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 15px;
+}
+
+/* Стили для всех ссылок меню */
+nav a {
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 18px;
+    font-style: normal;
+    padding: 10px 15px;
+    transition: color 0.3s ease;
+}
+
+nav a:hover {
+    color: #ff6600;
+}
+
+/* Контент */
+main {
+    padding: 20px;
+    background: white;
+    max-width: 1000px;
+    margin: 20px auto;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+/* Подвал */
+footer {
+    text-align: center;
+    padding: 15px;
+    background: #333;
+    color: white;
+    margin-top: 20px;
+}
+
+/* Страница подробного описания товара */
+/* Заголовки (Краткое описание, Характеристики, Подробное описание) */
+.product-description h3,
+.product-specs h3,
+.product-details h3,
+.product-appearance h3,
+.product-package h3 {
+    color: #000000;
+    font-size: 18px;
+    font-weight: 400;
+    background-color: #eaeaea;
+    padding: 10px 15px;
+    margin: 20px 0 10px 0;
+    border-radius: 3px;
+}
+
+/* Текст краткого описания товара */
+.product-description p {
+    color: #707070;
+    font-size: 14px;
+    font-style: italic;
+    line-height: 16px;
+    padding: 10px 15px;
+}
+
+/* Текст подробного описания товара */
+.product-details p {
+    color: #484343;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 24px;
+    text-align: left;
+    padding: 10px 15px;
+}
+
+/* Список внутри подраздела Характеристики */
+.product-details ul {
+    color: #555555;
+    font-size: 15px;
+    line-height: 22px;
+    list-style-image: url('../img/bullet.png');
+    padding: 10px 15px 10px 35px;
+}
+
+.product-details ul li {
+    margin-bottom: 5px;
+}
+
+/* Таблицы характеристик */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 10px 0;
+}
+
+table, th, td {
+    border: 1px solid #ddd;
+}
+
+th, td {
+    padding: 12px;
+    text-align: left;
+}
+
+th {
+    background-color: #ff6600;
+    color: white;
+}
+
+tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+/* Рамка для изображений на странице товара */
+.product-description img,
+.product-specs img,
+.product-details img,
+.product-appearance img {
+    border: 3px solid #ff6600;
+    border-radius: 5px;
+    padding: 5px;
+    max-width: 100%;
+    height: auto;
+}
+
+/* Страница Контакты - стили для полей ввода */
+.contact-form {
+    max-width: 500px;
+    margin: 20px auto;
+}
+
+.contact-form label {
+    display: block;
+    margin-bottom: 15px;
+}
+
+.contact-form input[type="text"],
+.contact-form input[type="email"],
+.contact-form textarea {
+    width: 100%;
+    height: 40px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    box-sizing: border-box;
+    color: #333333;
+    font-size: 14px;
+    font-family: Arial, sans-serif;
+}
+
+.contact-form textarea {
+    height: 120px;
+    resize: vertical;
+}
+
+.contact-form input[type="text"]:focus,
+.contact-form input[type="email"]:focus,
+.contact-form textarea:focus {
+    outline: none;
+    border-color: #ff6600;
+    box-shadow: 0 0 5px rgba(255, 102, 0, 0.3);
+}
+
+.contact-form button,
+.contact-form input[type="submit"] {
+    padding: 12px 30px;
+    background: #ff6600;
+    color: white;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+    border-radius: 3px;
+    transition: background 0.3s ease;
+}
+
+.contact-form button:hover,
+.contact-form input[type="submit"]:hover {
+    background: #e65c00;
+}
+
+.contact-info {
+    margin-top: 30px;
+    padding: 20px;
+    background: #f9f9f9;
+    border-radius: 5px;
+}
+
+.contact-info p {
+    margin: 10px 0;
+    font-size: 16px;
+}
+
+.contact-info a {
+    color: #ff6600;
+    text-decoration: none;
+}
+
+.contact-info a:hover {
+    text-decoration: underline;
+}
+
+/* Каталог */
+.products-grid {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 20px;
+    padding: 20px 0;
+}
+
+.product-card {
+    text-align: center;
+    border: 1px solid #ddd;
+    padding: 20px;
+    background: white;
+    border-radius: 5px;
+    width: 280px;
+    transition: box-shadow 0.3s ease;
+}
+
+.product-card:hover {
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+}
+
+.product-card img {
+    border: 2px solid #ff6600;
+    border-radius: 5px;
+    margin-bottom: 15px;
+    transition: transform 0.2s;
+}
+
+.product-card img:hover {
+    transform: scale(1.05);
+}
+
+.product-card a {
+    color: #ff6600;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 16px;
+}
+
+.product-card a:hover {
+    text-decoration: underline;
+}
+
+.product-card h3 {
+    margin: 10px 0;
+    color: #333;
+}
+
+/* Форма поиска */
+.search-form {
+    max-width: 400px;
+    margin: 20px auto;
+    padding: 20px;
+    background: #f9f9f9;
+    border-radius: 5px;
+}
+
+.search-form input[type="search"] {
+    width: 100%;
+    height: 40px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    box-sizing: border-box;
+    color: #333333;
+    font-size: 14px;
+    margin-bottom: 10px;
+}
+
+.search-form input[type="submit"] {
+    width: 100%;
+    padding: 12px;
+    background: #ff6600;
+    color: white;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+    border-radius: 3px;
+}
+
+.search-form input[type="submit"]:hover {
+    background: #e65c00;
+}
+
+/* Гостевая книга / форма отзывов */
+.guestbook-form {
+    max-width: 600px;
+    margin: 20px auto;
+    padding: 20px;
+    background: #f9f9f9;
+    border-radius: 5px;
+}
+
+.guestbook-form fieldset {
+    border: 1px solid #ddd;
+    padding: 15px;
+    margin-bottom: 15px;
+    border-radius: 3px;
+}
+
+.guestbook-form legend {
+    font-weight: bold;
+    color: #ff6600;
+    padding: 0 10px;
+}
+
+.guestbook-form label {
+    display: block;
+    margin-bottom: 10px;
+}
+
+.guestbook-form input[type="text"],
+.guestbook-form input[type="email"],
+.guestbook-form select,
+.guestbook-form textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    box-sizing: border-box;
+    color: #333333;
+    font-size: 14px;
+    margin-top: 5px;
+}
+
+.guestbook-form textarea {
+    height: 100px;
+    resize: vertical;
+}
+
+.guestbook-form input[type="radio"],
+.guestbook-form input[type="checkbox"] {
+    margin-right: 8px;
+}
+
+.guestbook-form .radio-group,
+.guestbook-form .checkbox-group {
+    margin: 10px 0;
+}
+
+.guestbook-form .radio-group label,
+.guestbook-form .checkbox-group label {
+    display: inline-block;
+    margin-right: 15px;
+}
+
+.guestbook-form input[type="submit"] {
+    width: 100%;
+    padding: 12px;
+    background: #ff6600;
+    color: white;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+    border-radius: 3px;
+    margin-top: 10px;
+}
+
+.guestbook-form input[type="submit"]:hover {
+    background: #e65c00;
+}
+
+/* Форма регистрации и авторизации */
+.auth-form {
+    max-width: 400px;
+    margin: 20px auto;
+    padding: 20px;
+    background: #f9f9f9;
+    border-radius: 5px;
+}
+
+.auth-form h3 {
+    text-align: center;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.auth-form input[type="text"],
+.auth-form input[type="email"],
+.auth-form input[type="password"] {
+    width: 100%;
+    height: 40px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    box-sizing: border-box;
+    color: #333333;
+    font-size: 14px;
+    margin-bottom: 15px;
+}
+
+.auth-form input[type="submit"] {
+    width: 100%;
+    padding: 12px;
+    background: #ff6600;
+    color: white;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+    border-radius: 3px;
+}
+
+.auth-form input[type="submit"]:hover {
+    background: #e65c00;
+}
+
+.auth-form .form-link {
+    text-align: center;
+    margin-top: 15px;
+}
+
+.auth-form .form-link a {
+    color: #ff6600;
+}
+
+/* Hero секция */
+.hero {
+    background: linear-gradient(135deg, #ff6600, #ff8533);
+    color: white;
+    padding: 60px 20px;
+    text-align: center;
+    border-radius: 5px;
+    margin-bottom: 30px;
+}
+
+.hero h2 {
+    margin: 0;
+    font-size: 28px;
+}
+
+/* Секции о нас */
+.about, .history, .team {
+    padding: 20px;
+    margin-bottom: 20px;
+    background: #fafafa;
+    border-radius: 5px;
+}
+
+.about h3, .history h3, .team h3 {
+    color: #ff6600;
+    border-bottom: 2px solid #ff6600;
+    padding-bottom: 10px;
+}
+
+/* Ссылки */
+a {
+    color: #ff6600;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+/* Результаты поиска */
+.search-results {
+    padding: 20px;
+}
+
+.search-results h2 {
+    color: #333;
+    border-bottom: 2px solid #ff6600;
+    padding-bottom: 10px;
+}
+
+.search-result-item {
+    background: #f9f9f9;
+    padding: 15px;
+    margin-bottom: 15px;
+    border-radius: 5px;
+    border-left: 4px solid #ff6600;
+}
+
+.search-result-item h3 {
+    margin: 0 0 10px 0;
+}
+
+.search-result-item h3 a {
+    color: #333;
+    text-decoration: none;
+}
+
+.search-result-item h3 a:hover {
+    color: #ff6600;
+}
+
+.no-results {
+    text-align: center;
+    padding: 40px;
+    color: #707070;
+    font-size: 18px;
+}
+
+/* Адаптивность */
+@media (max-width: 600px) {
+    nav ul li {
+        display: block;
+        margin: 5px 0;
+    }
+    
+    .products-grid {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .product-card {
+        width: 100%;
+        max-width: 300px;
+    }
+}

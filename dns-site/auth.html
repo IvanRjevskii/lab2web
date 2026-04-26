@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DNS - Вход и регистрация</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>🛒 DNS</h1>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Главная</a></li>
+                    <li><a href="catalog.html">Каталог</a></li>
+                    <li><a href="contacts.html">Контакты</a></li>
+                    <li><a href="guestbook.html">Гостевая книга</a></li>
+                    <li><a href="auth.html">Вход/Регистрация</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="auth-forms">
+            <!-- Форма авторизации -->
+            <div class="auth-form">
+                <h3>Вход в личный кабинет</h3>
+                <form method="post" action="php/auth.php">
+                    <input type="email" name="login_email" placeholder="Email" required>
+                    <input type="password" name="login_password" placeholder="Пароль" required>
+                    <input type="submit" value="Войти">
+                </form>
+                <div class="form-link">
+                    <p>Нет аккаунта? <a href="#register">Зарегистрироваться</a></p>
+                </div>
+            </div>
+
+            <!-- Форма регистрации -->
+            <div class="auth-form" id="register">
+                <h3>Регистрация нового пользователя</h3>
+                <form method="post" action="php/register.php">
+                    <input type="text" name="reg_name" placeholder="Ваше имя" required>
+                    <input type="email" name="reg_email" placeholder="Email" required>
+                    <input type="password" name="reg_password" placeholder="Пароль" required>
+                    <input type="password" name="reg_password_confirm" placeholder="Подтвердите пароль" required>
+                    <input type="submit" value="Зарегистрироваться">
+                </form>
+                <div class="form-link">
+                    <p>Уже есть аккаунт? <a href="#login">Войти</a></p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>© 2024 DNS. Все права защищены.</p>
+        </div>
+    </footer>
+</body>
+</html>
