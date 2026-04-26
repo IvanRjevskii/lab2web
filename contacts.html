@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DNS - Контакты</title>
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/script.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <h1>🛒 DNS</h1>
+        <p>Свяжитесь с нами</p>
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href="index.html">Главная</a></li>
+            <li><a href="catalog.html">Каталог</a></li>
+            <li><a href="contacts.html">Контакты</a></li>
+            <li><a href="search.php">Поиск</a></li>
+            <li><a href="guestbook.php">Гостевая книга</a></li>
+            <li><a href="auth.php">Личный кабинет</a></li>
+        </ul>
+    </nav>
+
+    <main>
+        <hr>
+        <h2>Напишите нам</h2>
+        
+        <div class="form-container">
+            <form onsubmit="return sendMessage()">
+                <div class="form-group">
+                    <label for="name">Имя:</label>
+                    <input type="text" id="name" name="name" placeholder="Ваше имя" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" placeholder="example@mail.ru" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="subject">Тема:</label>
+                    <input type="text" id="subject" name="subject" placeholder="Тема сообщения">
+                </div>
+                
+                <div class="form-group">
+                    <label for="message">Сообщение:</label>
+                    <textarea id="message" name="message" rows="5" placeholder="Ваше сообщение..." required></textarea>
+                </div>
+                
+                <div class="form-group">
+                    <label for="phone">Телефон:</label>
+                    <input type="tel" id="phone" name="phone" placeholder="+7 (___) ___-__-__">
+                </div>
+                
+                <button type="submit" class="btn-submit">📤 Отправить</button>
+            </form>
+        </div>
+
+        <hr>
+        <h3>📍 Адрес</h3>
+        <div class="detailed-description">
+            <p>📞 <strong>Телефон:</strong> +7 (800) 77-07-900</p>
+            <p>📍 <strong>Адрес:</strong> г. Москва, ул. Ташкенская, д. 34к1</p>
+            <p>✉️ <strong>Email:</strong> <a href="mailto:info@dns.ru">info@dns.ru</a></p>
+            <p>🕐 <strong>Режим работы:</strong> Пн-Вс: 10:00 - 22:00</p>
+        </div>
+        
+        <div class="map-container">
+            <!-- Карта Яндекс с новыми координатами: 55.696204, 37.802145 -->
+            <iframe src="https://yandex.ru/map-widget/v1/?ll=37.802145%2C55.696204&z=16&pt=37.802145,55.696204,pm2rdm" 
+                    width="100%" height="450" frameborder="0" allowfullscreen></iframe>
+        </div>
+    </main>
+
+    <footer>
+        <hr>
+        <p>&copy; 2024 DNS. Все права защищены.</p>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
